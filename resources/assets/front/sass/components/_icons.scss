@@ -1,0 +1,49 @@
+/**
+ * Font mixins
+ *
+ * Author: José Osório
+ * Copyright 2016
+ */
+
+$icons: (
+   /* miscelaneous */
+   star            : '\f4ce',
+   percentage      : '\f46f',
+   googlemaps      : '\f5f5',
+   eye             : '\f6cf',
+   pencil          : '\fc92 ',
+   hanger          : '\f2c8 ',
+   check          : '\fe6e',
+   plus          : '\f419',
+   chat          : '\FB55',
+   heart          : '\F8CF',
+
+
+   // arrows
+   caret-left: '\f141',
+   caret-right: '\f142',
+   caret-up: '\f143',
+   caret-down: '\f140',
+
+
+);
+
+
+.icon {
+  &--left{
+    margin-right: 10px;
+  }
+  &--right{
+    margin-left: 10px;
+  }
+	&::before {
+		font-family: $font-family-icons;
+		font-style: normal;
+	}
+
+	@each $modifier, $code in $icons {
+		&--#{$modifier}::before {
+			content: $code;
+		}
+	}
+}

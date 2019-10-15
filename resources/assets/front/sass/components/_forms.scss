@@ -1,0 +1,140 @@
+.form{
+
+   &--search{
+      width: 100%;
+      position: relative;
+
+      input{
+         height: 35px;
+         width: calc(100% - 50px);
+      }
+      i{
+         color: $light-coral-color;
+         padding-right: 10px;
+         font-size: 20px;
+         line-height: 36px;
+         display: inline-block;
+      }
+   }
+   &--newsletter{
+      width: 100%;
+      margin-top: 30px;
+
+      @include media-breakpoint-up-1600 {
+         margin-top: 60px;
+      }
+      input{
+         float:left;
+         padding: 0 15px;
+         height: 50px;
+         border: 1px solid $beige-color;
+         box-shadow: none;
+         font-size: 20px;
+         font-style: italic;
+         color: $grey-color;
+         width: calc(100% - 100px);
+
+         @include media-breakpoint-up(sm) {
+            width: calc(100% - 200px);
+         }
+         @include media-breakpoint-up(lg) {
+            height: 70px;
+         }
+
+         &:focus,
+         &:hover{
+            border: 1px solid $black-color;
+
+         }
+      }
+      button{
+         float:right;
+         height: 50px;
+         line-height: 50px;
+         width: 100px;
+         font-size: 0.65rem;
+          letter-spacing: 1.5px;
+          padding: 0 5px;
+
+         @include media-breakpoint-up(sm) {
+            width: 200px;
+            font-size: 0.9rem;
+             letter-spacing: 4px;
+         }
+         @include media-breakpoint-up(lg) {
+            height: 70px;
+            line-height: 70px;
+         }
+      }
+   }
+   &--authentication{
+      margin-top: 30px;
+
+      label{
+         display: block;
+      }
+
+      input{
+         width: 100%;
+         display: block;
+         height: 35px;
+         line-height: 35px;
+      }
+      .tip{
+         width: 100%;
+         font-size: .8rem;
+         text-decoration: underline;
+         color: $grey-color;
+         font-weight: $font-weight-semibold;
+      }
+   }
+
+   .form-group{
+      margin-bottom: 30px !important;
+   }
+
+   input{
+      background-color: transparent;
+      border-bottom: 1px solid $beige-color;
+      font-style: italic;
+      color:$beige-color;
+      font-size: .8rem;
+      @extend .transition;
+
+
+      &:focus,
+      &:active{
+         background-color: transparent !important;
+         box-shadow: none;
+      }
+
+      &::placeholder,
+      &::-webkit-input-placeholder,
+      &:-moz-input-placeholder,
+      &::-moz-input-placeholder,
+      &:-ms-input-placeholder,
+      &::-ms-input-placeholder {
+         font-style: italic;
+         color:$beige-color !important;
+         font-size: .8rem;
+         letter-spacing: 1px;
+      }
+   }
+   label{
+      text-transform: uppercase;
+      font-weight: $font-weight-bold;
+      letter-spacing: 2.5px;
+      font-size: .8rem;
+   }
+}
+.tip{
+   display: block;
+   color: $grey-color;
+   margin-top: 15px;
+   font-size:.7rem;
+
+   @include media-breakpoint-up-1600 {
+      margin-top: 30px;
+      font-size:1rem;
+   }
+}

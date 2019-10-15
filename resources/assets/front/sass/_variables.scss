@@ -1,0 +1,63 @@
+
+/**
+ * Colors
+ */
+$colors: (
+    'black'            : #1A1818,
+
+    'beige'            : #CCC1C0,
+
+    'light-grey'       : #B7ADAC,
+    'grey'             : #8E8786,
+    'dark-grey'        : #666060,
+
+    'brown'            : #7F433A,
+
+    'dark-coral'        : #995045,
+    'coral'             : #CC6B5C,
+    'light-coral'       : #FF8674,
+
+    'dirty'            : #F4F2F2,
+    'light-dirty'      : #F9F8F8,
+    'white'            : #fff,
+);
+
+/**
+ * Color applications
+*/
+$black-color                : map-get($colors, 'black');
+$beige-color                : map-get($colors, 'beige');
+
+$light-grey-color           : map-get($colors, 'light-grey');
+$grey-color                 : map-get($colors, 'grey');
+$dark-grey-color            : map-get($colors, 'dark-grey');
+
+$brown-color            : map-get($colors, 'brown');
+
+$light-coral-color           : map-get($colors, 'light-coral');
+$coral-color                 : map-get($colors, 'coral');
+$dark-coral-color            : map-get($colors, 'dark-coral');
+
+$light-dirty-color          : map-get($colors, 'light-dirty');
+$dirty-color                : map-get($colors, 'dirty');
+$white-color                : map-get($colors, 'white');
+
+// Typography
+$font-family-icons: "Material Design Icons";
+$font-family-primary: 'Proxima Nova', sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.6;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 500;
+$font-weight-bold: 600;
+
+// Body
+$body-bg: #fff;
+
+// Navbar
+$navbar-default-bg: transparent;
+
+// Panels
+$panel-default-heading-bg: transparent;

@@ -1,0 +1,240 @@
+.slideshow-wrapper{
+   position: relative;
+}
+.slideshow-products{
+   position: relative;
+   padding-left: 15px;
+
+   @media (min-width: 768px) {
+      padding-left: 30px;
+   }
+
+   @media (min-width: 1366px) {
+      padding-left: 60px;
+   }
+   &__slider{
+      padding: 0 15px;
+      width: 220px;
+
+      @include media-breakpoint-up(md) {
+         width: 300px;
+      }
+
+      @include media-breakpoint-up-1600 {
+         width: 380px;
+      }
+
+      .prod-title{
+
+         span{
+            display: block;
+         }
+      }
+      &:nth-of-type(3n){
+         width: 440px;
+
+         .prod-title{
+            font-size: 1rem;
+
+            span{
+               padding-left: 15px;
+               display: inline-block;
+            }
+
+            @include media-breakpoint-up(sm) {
+               font-size: 1.1rem;
+            }
+            @include media-breakpoint-up(xl) {
+               font-size: 1.5rem;
+            }
+
+            span{
+               font-size: .8rem;
+
+               @include media-breakpoint-up(sm) {
+                  font-size: 20px;
+               }
+            }
+         }
+         @include media-breakpoint-up(md) {
+            width: 615px;
+         }
+
+         @include media-breakpoint-up-1600 {
+            width: 800px;
+         }
+      }
+
+      .product-card__img{
+         height: 350px;
+
+         @include media-breakpoint-up(md) {
+            height: 450px;
+         }
+
+         @include media-breakpoint-up-1600 {
+            height: 580px;
+         }
+      }
+   }
+}
+.slideshow-instagram{
+   padding-left: 15px;
+
+   @media (min-width: 768px) {
+      padding-left: 30px;
+   }
+
+   @media (min-width: 1366px) {
+      padding-left: 60px;
+   }
+
+   &__slider{
+      margin: 0 2px;
+      @media (min-width: 768px) {
+         margin: 0 7px;
+      }
+   }
+}
+
+.slideshow{
+   position: relative;
+   height: 100vh;
+   @include media-breakpoint-up(sm) {
+      height: 468px;
+   }
+   @include media-breakpoint-up(lg) {
+      height: 100vh;
+   }
+
+   &__slider{
+      position: relative;
+      max-width: 100%;
+
+
+      &.effect{
+
+      }
+
+      &.active{
+         .top-banner__link{
+            opacity: 1;
+            visibility: visible;
+         }
+         .top-banner__logo img,
+         .top-banner__header{
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+         }
+
+      }
+      .top-banner{
+         height: 100vh !important;
+         @include media-breakpoint-up(sm) {
+            height: 468px  !important;
+         }
+         @include media-breakpoint-up(lg) {
+            height: 100vh  !important;
+         }
+         &:hover{
+            .top-banner__img{
+               transform: scale(1) !important;
+            }
+         }
+      }
+      .top-banner__link{
+         opacity: 0;
+         visibility: hidden;
+      }
+      .top-banner__logo img,
+      .top-banner__header{
+         transform: translateY(100%);
+         opacity: 0;
+         visibility: hidden;
+      }
+      .top-banner__link{
+         -webkit-transition: 0.4s all ease-in;
+         transition: 0.4s all ease-in;
+      }
+
+      .top-banner__logo img,
+      .top-banner__header{
+         -webkit-transition: all .9s cubic-bezier(.165,.84,.44,1) 0s;
+         transition: all .9s cubic-bezier(.165,.84,.44,1) 0s;
+         transition: all .9s cubic-bezier(.165,.84,.44,1) 0s;
+      }
+   }
+   &__lines{
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: -ms-flexbox;
+     display: -webkit-flex;
+     display: flex;
+     -webkit-flex-direction: row;
+     -ms-flex-direction: row;
+     flex-direction: row;
+     -webkit-flex-wrap: nowrap;
+     -ms-flex-wrap: nowrap;
+     flex-wrap: nowrap;
+     -webkit-justify-content: flex-start;
+     -ms-flex-pack: start;
+     justify-content: flex-start;
+     -webkit-align-content: stretch;
+     -ms-flex-line-pack: stretch;
+     align-content: stretch;
+     -webkit-align-items: center;
+     -ms-flex-align: center;
+     align-items: center;
+     width: 25px;
+
+     @include media-breakpoint-up(sm) {
+        width: 50px;
+     }
+      .slick-dots{
+         text-align: right;
+         -webkit-order: 0;
+         -ms-flex-order: 0;
+         order: 0;
+         -webkit-flex: 0 1 auto;
+         -ms-flex: 0 1 auto;
+         flex: 0 1 auto;
+         -webkit-align-self: auto;
+         -ms-flex-item-align: auto;
+         align-self: auto;
+
+         .slick-active{
+            button{
+               width: 25px;
+
+               @include media-breakpoint-up(sm) {
+                  width: 50px;
+               }
+
+            }
+         }
+
+         button{
+            background-color: white;
+            width: 15px;
+            height: 2px;
+            text-indent: 3000em;
+            overflow: hidden;
+            @extend .transition;
+            transform-origin: center left;
+
+            @include media-breakpoint-up(sm) {
+               height: 3px;
+               width: 30px;
+            }
+            &:focus,
+            &:hover{
+               outline: none;
+            }
+         }
+      }
+
+   }
+}

@@ -1,0 +1,99 @@
+.bg-white{
+   background-color: white;
+   opacity: .6;
+   position: fixed;
+   z-index: 3;
+   @extend .abs-center;
+}
+.slide{
+   position: fixed;
+   right: 0;
+   top: 0;
+   // bottom: 0;
+   width: 100%;
+   background-color: white;
+   text-align: left;
+   padding: 20px 30px;
+   z-index: 5;
+   @extend .transition;
+    min-height: 100vh;
+    overflow: auto;
+
+   @include media-breakpoint-up(sm) {
+      max-width: 360px;
+      min-width: 360px;
+   }
+   @include media-breakpoint-up(lg) {
+      max-width: 460px;
+   }
+
+
+   &__counter{
+      color: $light-coral-color;
+      font-weight: $font-weight-semibold;
+   }
+   .icon-close{
+      font-size: 30px;
+      margin-left: 10px;
+      @extend .transition;
+
+      &:focus,
+      &:hover{
+         outline:none;
+         color: $light-coral-color;
+      }
+   }
+   &__header{
+      color: $grey-color;
+      margin-bottom:30px;
+
+      &-right{
+         float: right;
+         line-height: 30px;
+         display: block;
+         h4{
+            line-height: 30px;
+            // display: inline-block;
+         }
+         *{
+            display: inline-block;
+            vertical-align: middle;
+         }
+      }
+      &-left{
+         float: left;
+         line-height: 30px;
+         display: block;
+
+         i{
+            margin-right: 10px;
+         }
+         h4{
+            line-height: 30px;
+            display: block;
+         }
+      }
+   }
+
+   &__container{
+      color: $black-color;
+   }
+   &__footer{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      .btn{
+         width: 100%;
+      }
+      .btn{
+         font-size: .8rem;
+         letter-spacing: 2px;
+         @include media-breakpoint-up(sm) {
+            font-size: .9rem;
+            letter-spacing: 4px;
+         }
+      }
+   }
+}

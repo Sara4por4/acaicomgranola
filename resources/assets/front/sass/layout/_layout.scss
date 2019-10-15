@@ -1,0 +1,99 @@
+@include media-breakpoint-up(sm) { }
+@include media-breakpoint-up(md) { }
+@include media-breakpoint-up(xl) { }
+@include media-breakpoint-up-1600 { }
+
+html,
+body{
+   @extend .transition;
+
+   &.fixed{
+      overflow: hidden;
+
+      &::before{
+         content: '';
+         background-color: white;
+         opacity: .6;
+         @extend .abs-center;
+         z-index: 3;
+      }
+   }
+}
+.section{
+   margin: 30px 0;
+
+   @media (min-width: 1366px) {
+      margin: 60px 0;
+    }
+
+    &--margin{
+      margin: 60px 0;
+
+      @include media-breakpoint-up(xl) {
+         margin: 110px 0;
+       }
+      @include media-breakpoint-up-1600 {
+         margin: 160px 0;
+       }
+   }
+
+    &__header{
+      text-align: center;
+      margin-bottom: 30px;
+
+      @include media-breakpoint-up(md) {
+         margin-bottom: 60px;
+       }
+      @include media-breakpoint-up-1600 {
+         margin-bottom: 80px;
+       }
+
+       .small-title{
+          margin-top: 15px;
+
+          @include media-breakpoint-up-1600 {
+             margin-top: 30px;
+          }
+       }
+
+       &.instagram{
+          .small-title{
+             color: $light-coral-color;
+          }
+       }
+   }
+}
+
+
+.divisor{
+   height: 1px;
+   width: 100%;
+   background-color: $light-grey-color;
+   border: none;
+}
+
+// CENTER CONTENT
+.abs-center{
+  margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+  right: 0;
+	left: 0;
+}
+
+// FULL WITH&HEIGHT BG IMAGE
+.full-img{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: center;
+  background-size: cover;
+}
+.transition{
+  transition: .3s all ease-in;
+}
+
+.centered{
+  margin: 30px auto;
+  display: block;
+}

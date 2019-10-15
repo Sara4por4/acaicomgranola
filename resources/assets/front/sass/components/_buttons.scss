@@ -1,0 +1,230 @@
+.round-btn {
+   max-width: 280px;
+   display: block;
+   text-transform: uppercase;
+   color: $light-coral-color;
+   font-weight: $font-weight-bold;
+   font-size: .8rem;
+   letter-spacing: .1rem;
+   text-align: center;
+
+   @include media-breakpoint-up(sm) {
+      font-size: .9rem;
+      letter-spacing: .15rem;
+   }
+   @include media-breakpoint-up(md) {
+      font-size: 1rem;
+      letter-spacing: .2rem;
+   }
+   span{
+      margin: 0 auto 5px;
+      position: relative;
+      z-index: 1;
+      color: $light-coral-color;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      display: block;
+
+      i{
+         display: block;
+         line-height: 35px;
+         font-size: .8rem;
+         position: relative;
+         z-index: 2;
+         @extend .transition;
+
+         @include media-breakpoint-up(sm) {
+            line-height: 40px;
+            font-size: .9rem;
+         }
+         @include media-breakpoint-up(md) {
+            line-height: 60px;
+            font-size: 1.2rem;
+         }
+
+         &::before{
+            display: block;
+            text-align: center;
+            margin: auto;
+            width: 13px;
+
+            @include media-breakpoint-up(sm) {
+               width: 18px;
+            }
+            @include media-breakpoint-up(lg) {
+               width: 14px;
+            }
+
+            @include media-breakpoint-up(xl) {
+               width: 20px;
+            }
+         }
+      }
+
+      @include media-breakpoint-up(sm) {
+         margin: 0 auto 10px;
+         width: 40px;
+         height: 40px;
+      }
+      @include media-breakpoint-up(md) {
+         margin: 0 auto 15px;
+         width: 60px;
+         height: 60px;
+         line-height: 60px;
+      }
+
+      &::after{
+         content: '';
+         @extend .abs-center;
+         background-image: url(front/img/icons/white-round.svg);
+         background-position: center;
+         background-size: contain;
+         @extend .transition;
+      }
+   }
+
+   &--small{
+      font-size: .9rem;
+      letter-spacing: .2rem;
+
+      span {
+        margin: 0 auto 10px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+
+        i{
+           font-size: .9rem;
+           line-height: 40px;
+
+           &::before{
+             width: 15px;
+             display: block;
+             text-align: center;
+             margin: auto;
+           }
+        }
+      }
+   }
+
+   &:focus,
+   &:hover{
+      outline: none;
+      // color: $light-coral-color;
+      span{
+         color: white;
+
+         &::after{
+            background-image: url(front/img/icons/coral-round.svg);
+         }
+      }
+   }
+}
+[type=button], [type=reset], [type=submit]{
+    -webkit-appearance: none;
+}
+.btn {
+   position: relative;
+   font-family: $font-family-primary;
+   font-weight: $font-weight-bold;
+   font-size: .9rem;
+   // font-size: 14px;
+   letter-spacing: 4px;
+   text-transform: uppercase;
+   text-align: center;
+   min-width: 90px;
+   max-width: 100%;
+   line-height: 60px!important;
+   border-radius: 0;
+   outline: none;
+   padding: 0 25px;
+   border: none;
+   z-index: 1;
+   display: block;
+   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+   &:hover,
+   &:focus,
+   &:active{
+      outline: none;
+      box-shadow: none;
+   }
+
+   &--coral{
+      background-color: $light-coral-color;
+      color: $white-color;
+      &:hover {
+         background-color: $coral-color;
+      }
+   }
+   &--black{
+      background-color: $black-color;
+      color: $white-color;
+      &:hover {
+         color: $dark-coral-color;
+         background-color: $light-coral-color;
+      }
+   }
+
+   &--center {
+      margin: 50px auto 80px;
+      display: block;
+   }
+
+}
+
+.link {
+   position: relative;
+   font-family: $font-family-primary;
+   font-weight: $font-weight-bold;
+   font-size: 1rem;
+   // font-size: 24px;
+   text-transform: uppercase;
+   line-height: 35px;
+   letter-spacing: .1rem;
+   display: inline-block;
+   @extend .transition;
+
+   @include media-breakpoint-up(md) {
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+   }
+   @include media-breakpoint-up-1600 {
+      font-size: 1.5rem;
+   }
+
+   &--small{
+      text-decoration: underline;
+      font-size: .9rem;
+      // font-size: 14px;
+   }
+
+   &--coral{
+      color: $light-coral-color;
+      &:hover {
+      }
+      .icon{
+         padding-right: 5px !important;
+      }
+   }
+   &--dark-coral{
+      color: $dark-coral-color;
+      &:hover {
+      }
+   }
+
+   .icon{
+      padding-right: 10px;
+      line-height: 35px;
+      display: inline-block;
+      font-size: 1.1rem;
+
+      &::before{
+         line-height: 35px;
+         display: inline-block;
+      }
+   }
+
+}
