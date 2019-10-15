@@ -154,7 +154,7 @@ $('.slideshow').on(
    dots: true,
    arrows: false,
    autoplay: true,
-   autoplaySpeed: 1500,
+   autoplaySpeed: 2000,
    infinite:true,
    slidesToShow: 1,
    slidesToScroll: 1,

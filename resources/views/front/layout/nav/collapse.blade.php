@@ -64,7 +64,7 @@
                         </li>
                      </ul>
 
-                     <a href="#" class="nav__seeall link link--dark-coral link--small">ver todos</a>
+                     <a href="swimwear" class="nav__seeall link link--dark-coral link--small">ver todos</a>
                   </div>
                </div>
 
@@ -90,7 +90,7 @@
                         </li>
                      </ul>
 
-                     <a href="#" class="nav__seeall link link--dark-coral link--small">ver todos</a>
+                     <a href="fitwear" class="nav__seeall link link--dark-coral link--small">ver todos</a>
                   </div>
                </div>
 
