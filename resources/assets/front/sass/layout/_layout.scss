@@ -59,11 +59,151 @@ body{
        &.instagram{
           .small-title{
              color: $light-coral-color;
+z
+             .icon-instagram{
+                margin-right: 10px;
+
+                @include media-breakpoint-up-1600 {
+                   margin-right: 15px;
+                }
+             }
           }
        }
    }
 }
 
+// products list pages
+.products-page{
+
+   &__footer{
+      text-align: center;
+      color: $light-grey-color;
+      margin-top: 60px;
+      margin-bottom: 30px;
+
+      @include media-breakpoint-up(lg) {
+         margin-top: 100px;
+         margin-bottom: 40px;
+      }
+      @include media-breakpoint-up-1600 {
+         margin-top: 180px;
+         margin-bottom: 80px;
+      }
+      *{
+         display: inline-block;
+      }
+      h4{
+         font-weight: $font-weight-bold;
+         text-transform: uppercase;
+         letter-spacing: 2px;
+
+         @include media-breakpoint-up-1600 {
+            letter-spacing: 3.5px;
+         }
+      }
+      .products-menu{
+         li{
+            margin: 0 5px;
+            display: inline-block;
+
+            @include media-breakpoint-up(lg) {
+               margin: 0 10px;
+            }
+            @include media-breakpoint-up-1600 {
+               margin: 0 15px;
+            }
+            a{
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+}
+
+.page-header{
+   margin-bottom: 60px;
+
+   .col-sm-6:nth-of-type(n+2){
+      text-align: right;
+   }
+   a{
+      @extend .transition;
+   }
+   &__breadcrumbs{
+      li{
+         position: relative;
+         display: inline-block;
+         &:hover,
+         &.active{
+            a{
+               color: $black-color;
+            }
+         }
+         &:nth-of-type(n+2){
+            padding-left: 15px;
+            margin-left: 15px;
+
+            &::before{
+               content: '>';
+               position: absolute;
+               left: -5px;
+               top: 0;
+               bottom: 0;
+               font-size: 12px;
+               line-height: 35px;
+            }
+         }
+         a{
+            font-weight: $font-weight-semibold;
+            letter-spacing: .5px;
+            color: $beige-color;
+            line-height: 35px;
+         }
+      }
+   }
+   &__el{
+      display: inline-block;
+      vertical-align: top;
+
+      &:nth-of-type(n+2){
+         padding-left: 60px;
+      }
+      a{
+         line-height: 35px;
+      }
+   }
+   &__btn{
+      &:hover{
+         color: $light-coral-color;
+      }
+   }
+   &__grid{
+      li{
+         color: $beige-color;
+         display: inline-block;
+         vertical-align: middle;
+
+         &:hover{
+            a{
+               color: $black-color;
+            }
+         }
+         &.active{
+            a{
+               color: $black-color;
+            }
+         }
+         a{
+            font-size: 14px;
+            font-weight: $font-weight-bold;
+            width: 25px;
+            display: block;
+            text-align: center;
+         }
+
+      }
+   }
+}
 
 .divisor{
    height: 1px;

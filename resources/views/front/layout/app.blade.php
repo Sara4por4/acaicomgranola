@@ -27,7 +27,9 @@
 
       @if(Request::is('/'))
           @include('front.layout.nav.nav-homepage')
-      @else()
+      @elseif(Request::is('swimwear') || Request::is('fitwear'))
+          @include('front.layout.nav.nav-absolute')
+      @else
           @include('front.layout.nav.nav')
       @endif
 
@@ -44,6 +46,7 @@
     <!-- JavaScripts -->
     <script src="{{url('/')}}/front/js/app.js"></script>
     <script src="{{url('/')}}/front/js/actions.js"></script>
+    <script src="{{url('/')}}/front/plugins/slick/slick.min.js"></script>
     <script src="{{url('/')}}/front/plugins/headroom/headroom.js"></script>
     <script src="{{url('/')}}/front/plugins/headroom/jQuery.headroom.js"></script>
 

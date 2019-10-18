@@ -3,13 +3,13 @@
 @section('content')
 
 <!-- top banner -->
-<div class="wrapper-full-banner">   
+<div class="wrapper-full-banner">
 @include('front.components.banner', [
 'subtitle'=>'Inspire-se com as novidades',
 'title'=> 'fitwear',
 'image'=>'front/img/photos/photo1.jpg',
 'linklabel'=>'ver nova coleção',
-'link'=>'',
+'link'=>'product-list',
 ])
 </div>
 <!-- top banner -->
@@ -22,7 +22,7 @@
       'title'=> 'mais conforto',
       'image'=>'front/img/photos/photo2.jpg',
       'linklabel'=>'ver coleção',
-      'link'=>'',
+      'link'=>'product-list',
       ])
    </div>
 
@@ -38,7 +38,7 @@
          'title'=> 'mais power',
          'image'=>'front/img/photos/photo13.png',
          'linklabel'=>'ver coleção',
-         'link'=>'',
+         'link'=>'product-list',
          ])
       </div>
       <div class="col">
@@ -47,7 +47,7 @@
          'title'=> 'novo look',
          'image'=>'front/img/photos/photo14.png',
          'linklabel'=>'ver coleção',
-         'link'=>'',
+         'link'=>'product-list',
          ])
       </div>
    </div>
@@ -74,6 +74,8 @@
             'price'=>'33',
             'label'=>'10%',
             'labeltype'=>'promo',
+            'link'=>'',
+
             ])
          </div>
          <div class="slideshow-products__slider">
@@ -83,6 +85,8 @@
             'price'=>'33',
             'label'=>'10%',
             'labeltype'=>'promo',
+            'link'=>'',
+
             ])
          </div>
          <div class="slideshow-products__slider">
@@ -92,6 +96,8 @@
             'price'=>'33',
             'label'=>'new',
             'labeltype'=>'new',
+            'link'=>'',
+
             ])
          </div>
          <div class="slideshow-products__slider">
@@ -101,6 +107,8 @@
             'price'=>'33',
             'label'=>'10%',
             'labeltype'=>'promo',
+            'link'=>'',
+            
             ])
          </div>
       </div>

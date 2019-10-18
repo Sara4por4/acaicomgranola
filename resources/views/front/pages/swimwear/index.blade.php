@@ -9,7 +9,7 @@
 'title'=> 'swimwear',
 'image'=>'front/img/photos/photo10.png',
 'linklabel'=>'ver nova coleção',
-'link'=>'',
+'link'=>'product-list',
 ])
 </div>
 <!-- top banner -->
@@ -22,7 +22,7 @@
       'title'=> 'bikinis 2020',
       'image'=>'front/img/photos/photo12.png',
       'linklabel'=>'ver nova coleção',
-      'link'=>'',
+      'link'=>'product-list',
       ])
    </div>
 
@@ -38,7 +38,7 @@
          'title'=> 'fatos de banho',
          'image'=>'front/img/photos/photo7.png',
          'linklabel'=>'ver coleção',
-         'link'=>'',
+         'link'=>'product-list',
          ])
       </div>
       <div class="col">
@@ -47,7 +47,7 @@
          'title'=> 'novo look',
          'image'=>'front/img/photos/photo11.png',
          'linklabel'=>'ver coleção',
-         'link'=>'',
+         'link'=>'product-list',
          ])
       </div>
    </div>
@@ -74,6 +74,8 @@
             'price'=>'33',
             'label'=>'10%',
             'labeltype'=>'promo',
+            'link'=>'',
+
             ])
          </div>
          <div class="slideshow-products__slider">
@@ -83,6 +85,8 @@
             'price'=>'33',
             'label'=>'10%',
             'labeltype'=>'promo',
+            'link'=>'',
+
             ])
          </div>
          <div class="slideshow-products__slider">
@@ -92,6 +96,8 @@
             'price'=>'33',
             'label'=>'new',
             'labeltype'=>'new',
+            'link'=>'',
+
             ])
          </div>
          <div class="slideshow-products__slider">
@@ -101,6 +107,8 @@
             'price'=>'33',
             'label'=>'10%',
             'labeltype'=>'promo',
+            'link'=>'',
+            
             ])
          </div>
       </div>

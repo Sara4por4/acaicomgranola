@@ -1,4 +1,4 @@
-<nav class="nav nav--relative headroom">
+<nav class="nav nav--absolute headroom">
    <div class="container clearfix">
 
       <div class="nav__left">

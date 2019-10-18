@@ -1,6 +1,48 @@
 .product-card{
    position: relative;
+   cursor: pointer;
 
+   &__slideshow{
+      &-wrapper{
+         position: relative;
+      }
+      .slick-arrow{
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         margin: auto;
+         text-align: center;
+         width: 35px;
+         height: 35px;
+         color: $light-dirty-color;
+         z-index: 2;
+         font-size: 22px;
+         @extend .transition;
+
+         @include media-breakpoint-up(xl) {
+            font-size: 30px;
+         }
+
+         &:focus,
+         &:hover{
+            outline: none;
+            opacity: .6;
+         }
+
+         &.slick-prev{
+            left: 15px;
+            @include media-breakpoint-up(xl) {
+               left: 30px;
+            }
+         }
+         &.slick-next{
+            right: 15px;
+            @include media-breakpoint-up(xl) {
+               right: 30px;
+            }
+         }
+      }
+   }
    &__img{
       @extend .full-img;
       height: 370px;

@@ -135,4 +135,10 @@ Big Grid Reset
 	@media (min-width: 1280px) and (max-width: 1440px) and (-webkit-min-device-pixel-ratio: 2){
 
 	}
+
+	&--xxlscreens{
+		@include media-breakpoint-up-1600 {
+         padding: 0 120px !important;
+      }
+	}
 }

@@ -115,7 +115,6 @@ body,
 }
 
 
-
 .subtitle {
    font-size: 1.1rem;
    // font-size: 18px;
@@ -151,13 +150,22 @@ body,
       // font-size: 18px;
       line-height: 1.7rem;
    }
+   @include media-breakpoint-up-1600 {
+      font-size: 1.5rem;
+      // font-size: 24px;
+      line-height: 1.8rem;
+   }
 
    span{
       font-weight: $font-weight-bold;
       font-size: 1rem;
+      // font-size: 16px;
+
       @include media-breakpoint-up-1600 {
          font-weight: $font-weight-semibold;
-         font-size: 1.2rem;
+         font-size: 1.25rem;
+         // font-size: 20px;
+
       }
    }
 }
@@ -201,6 +209,7 @@ body,
 
    &--semibold{
       font-weight: $font-weight-semibold;
+      letter-spacing: 1px;
    }
    &--bold{
       letter-spacing: 2.8px;

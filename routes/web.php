@@ -21,3 +21,7 @@ Route::get('/swimwear', function () {
 Route::get('/fitwear', function () {
     return view('front.pages.fitwear.index');
 });
+
+Route::get('/product-list', function () {
+    return view('front.pages.product.index');
+});

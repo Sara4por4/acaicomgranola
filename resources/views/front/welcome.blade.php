@@ -127,7 +127,6 @@
 @endsection
 
 @push('scripts')
-<script src="{{url('/')}}/front/plugins/slick/slick.min.js"></script>
 <script>
 
 elementAnimation('.top-banner .top-banner__header', 'show');
