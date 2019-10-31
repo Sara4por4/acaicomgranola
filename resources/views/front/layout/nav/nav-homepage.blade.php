@@ -20,7 +20,7 @@
       <div class="nav__right">
          <ul class="nav__icons-menu">
             <li class="d-none d-sm-inline-block">
-               <a href="#" class="icon-search"></a>
+               <button type="button" name="button"  class="icon-search nav__toggler-search"></buton>
             </li>
             <li>
                <favs></favs>
@@ -40,12 +40,19 @@
 </nav>
 
 @include('front.layout.nav.collapse')
+@include('front.layout.nav.search')
 
 
 @push('scripts')
 <script>
 
    $(".nav").headroom();
+
+   $('.nav__toggler-search').click(function() {
+      $(this).toggleClass('active');
+      $('.nav__search').toggleClass('show');
+      $('.nav').toggleClass('opened');
+   });
 
    $('.nav__toggler').click(function() {
       $(this).toggleClass('active');
@@ -54,7 +61,7 @@
    });
 
    $('.nav__top-menu li').hover(function() {
-      $(this).toggleClass('active');
+      // $(this).toggleClass('active');
       $('.nav__top-menu').toggleClass('hovered');
    });
 

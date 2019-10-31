@@ -15,14 +15,20 @@
                   <button type="button"  @click="toggleFavs()" class="icon-close"></button>
                </div>
             </div>
-            <div class="slide__container">
-               <p class="small-text small-text--semibold">A sua lista de favoritos está vazia!</p>
-               <p class="smaller-text">Guarde os artigos que mais gosta para não os perder de vista.</p>
+
+            <div v-if="empty">
+               <div class="slide__container">
+                  <p class="small-text small-text--semibold">A sua lista de favoritos está vazia!</p>
+                  <p class="smaller-text">Guarde os artigos que mais gosta para não os perder de vista.</p>
+               </div>
+               <div class="slide__footer">
+                  <a href="#" class="btn btn--coral">Iniciar sessão</a>
+                  <a href="#" class="btn btn--black">Não tem conta? Registe-se</a>
+               </div>
             </div>
-            <div class="slide__footer">
-               <a href="#" class="btn btn--coral">Iniciar sessão</a>
-               <a href="#" class="btn btn--black">Não tem conta? Registe-se</a>
-            </div>
+
+            <summaryfav v-else></summaryfav>
+
          </div>
       </transition>
       <transition name="fade">
@@ -34,9 +40,15 @@
 </template>
 
 <script>
+import summaryfav from './partials/summaryfav';
+
 export default {
+   components: {
+      summaryfav
+   },
    data () {
        return {
+          empty: false,
            visible: false,
            totalProducts: 0,
        };

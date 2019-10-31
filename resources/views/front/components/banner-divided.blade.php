@@ -15,7 +15,7 @@
 
 
    <div class="top-banner__logo">
-      <img src="front/img/logo-big.svg" alt="">
+      <img src="{{ $logo }}" alt="">
    </div>
 
 

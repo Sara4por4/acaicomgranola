@@ -54,6 +54,11 @@ body,
       line-height: 4rem;
       letter-spacing: 12px;
    }
+
+   &--bold{
+      text-transform: uppercase;
+      font-weight: $font-weight-bold;
+   }
 }
 
 .section-title{
@@ -63,8 +68,12 @@ body,
    font-weight: $font-weight-regular;
 
    &--caps{
-      letter-spacing: 3px;
+      letter-spacing: 4.2px !important;
       text-transform: uppercase;
+
+      @include media-breakpoint-up-1600 {
+         letter-spacing: 5.7px !important;
+      }
    }
 
    span{
@@ -76,13 +85,13 @@ body,
       font-size: 1.7rem;
       // font-size: 28px;
       line-height: 2.2rem;
-      letter-spacing: 3px;
+      letter-spacing: .56px;
    }
    @include media-breakpoint-up-1600 {
       font-size: 2.4rem;
       // font-size: 38px;
-      line-height: 3rem;
-      letter-spacing: 4.5px;
+      line-height: 2.9rem;
+      letter-spacing: .76px;
    }
 }
 
@@ -92,7 +101,7 @@ body,
    // font-size: 14px;
    line-height: 1.4rem;
    font-weight: $font-weight-regular;
-   letter-spacing: .4px;
+   letter-spacing: .2px;
 
    span{
       font-weight: $font-weight-bold;
@@ -105,12 +114,13 @@ body,
       font-size: 1.1rem;
       // font-size: 18px;
       line-height: 1.7rem;
-      letter-spacing: .6px;
+      letter-spacing: .37px;
    }
    @include media-breakpoint-up-1600 {
       font-size: 1.7rem;
       // font-size: 28px;
-      line-height: 2.2rem;
+      line-height: 2.1rem;
+      letter-spacing: .58px;
    }
 }
 
@@ -118,23 +128,45 @@ body,
 .subtitle {
    font-size: 1.1rem;
    // font-size: 18px;
-   line-height: 1.7rem;
+   line-height: 1.5rem;
    font-weight: $font-weight-regular;
+   letter-spacing: .5px;
+
+   &--caps{
+      text-transform: uppercase;
+   }
+   &--bold{
+      font-weight: $font-weight-bold;
+      letter-spacing: 3.6px !important;
+
+      @include media-breakpoint-up(sm) {
+         letter-spacing: 5.6px !important;
+      }
+      @include media-breakpoint-up(xl) {
+         letter-spacing: 7.6px !important;
+      }
+      @include media-breakpoint-up-1600 {
+         letter-spacing: 9.6px !important;
+      }
+   }
 
    @include media-breakpoint-up(sm) {
       font-size: 1.7rem;
       // font-size: 28px;
       line-height: 2.2rem;
+      letter-spacing: .6px;
    }
    @include media-breakpoint-up(xl) {
       font-size: 2.2rem;
       // font-size: 38px;
       line-height: 2.6rem;
+      letter-spacing: .76px;
    }
    @include media-breakpoint-up-1600 {
       font-size: 3rem;
       // font-size: 48px;
       line-height: 3.5rem;
+      letter-spacing: .9px;
    }
 }
 
@@ -143,9 +175,9 @@ body,
    font-size: .9rem;
    // font-size: 14px;
    line-height: 1.4rem;
-   font-weight: $font-weight-regular;
+   font-weight: $font-weight-light;
 
-   @include media-breakpoint-up(xl) {
+   @include media-breakpoint-up(md) {
       font-size: 1.1rem;
       // font-size: 18px;
       line-height: 1.7rem;
@@ -158,14 +190,9 @@ body,
 
    span{
       font-weight: $font-weight-bold;
-      font-size: 1rem;
-      // font-size: 16px;
 
       @include media-breakpoint-up-1600 {
          font-weight: $font-weight-semibold;
-         font-size: 1.25rem;
-         // font-size: 20px;
-
       }
    }
 }
@@ -176,7 +203,9 @@ body,
    // font-size: 18px;
    line-height: 1.7;
    font-weight: $font-weight-regular;
+   letter-spacing: .36px;
 
+   span,
    &--semibold{
       font-weight: $font-weight-semibold;
    }
@@ -191,9 +220,11 @@ body,
 .small-text{
    font-size: 1rem;
    font-weight: $font-weight-regular;
+   letter-spacing: .36px;
 
    &--caps{
       text-transform: uppercase;
+      letter-spacing: 3.2px;
    }
    &--semibold{
       font-weight: $font-weight-semibold;
@@ -206,21 +237,23 @@ body,
    font-size: .85rem;
    // font-size: 14px;
    font-weight: $font-weight-regular;
+   letter-spacing: .28px;
 
    &--semibold{
       font-weight: $font-weight-semibold;
       letter-spacing: 1px;
    }
    &--bold{
-      letter-spacing: 2.8px;
       text-transform: uppercase;
       font-weight: $font-weight-bold;
+      letter-spacing: 2.4px;
    }
 }
 .tiny-text{
    font-size: .75rem;
    // font-size: 12px;
    font-weight: $font-weight-regular;
+   line-height: 1rem;
 
    &--semibold{
       font-weight: $font-weight-semibold;
@@ -232,5 +265,4 @@ body,
       font-weight: $font-weight-bold;
       text-transform: uppercase;
    }
-
 }

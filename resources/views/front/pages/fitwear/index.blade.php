@@ -9,7 +9,7 @@
 'title'=> 'fitwear',
 'image'=>'front/img/photos/photo1.jpg',
 'linklabel'=>'ver nova coleção',
-'link'=>'product-list',
+'link'=>'products-list',
 ])
 </div>
 <!-- top banner -->
@@ -22,7 +22,7 @@
       'title'=> 'mais conforto',
       'image'=>'front/img/photos/photo2.jpg',
       'linklabel'=>'ver coleção',
-      'link'=>'product-list',
+      'link'=>'products-list',
       ])
    </div>
 
@@ -38,7 +38,7 @@
          'title'=> 'mais power',
          'image'=>'front/img/photos/photo13.png',
          'linklabel'=>'ver coleção',
-         'link'=>'product-list',
+         'link'=>'products-list',
          ])
       </div>
       <div class="col">
@@ -47,7 +47,7 @@
          'title'=> 'novo look',
          'image'=>'front/img/photos/photo14.png',
          'linklabel'=>'ver coleção',
-         'link'=>'product-list',
+         'link'=>'products-list',
          ])
       </div>
    </div>
@@ -108,7 +108,7 @@
             'label'=>'10%',
             'labeltype'=>'promo',
             'link'=>'',
-            
+
             ])
          </div>
       </div>
@@ -124,7 +124,7 @@
    <div class="container">
       <div class="section__header instagram">
          <h4 class="section-title  section-title--caps">Partilha as tuas fotos com <span>#acaicomgranola</span></h4>
-         <p class="small-title">Segue <span>@acaicomgranola</span> para te inspirares</p>
+         <p class="small-title"><i class="icon-instagram"></i>Segue <span>@acaicomgranola</span> para te inspirares</p>
       </div>
    </div>
 

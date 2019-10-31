@@ -1,18 +1,247 @@
+.address-list{
 
+   &__intro{
+      margin-bottom: 60px;
+   }
+   &__el{
+
+      .address-card{
+         border: 1px solid $beige-color;
+      }
+
+      &:nth-of-type(n+3){
+         margin-top: 30px;
+      }
+   }
+
+   .round-btn{
+      margin: 30px auto 0;
+      @include media-breakpoint-up(lg) {
+         margin: 60px auto 0;
+      }
+   }
+}
+
+.info-menu ~ .link-underline{
+   margin-top: 30px;
+
+   @include media-breakpoint-up(lg) {
+      margin-top: 60px;
+   }
+}
+.info-menu{
+
+   li{
+      display: block;
+      position: relative;
+
+      &:after{
+         content: '\f140';
+         position: absolute;
+         top: 0;
+         right: 0;
+         font-family: $font-family-icons;
+         color: $light-grey-color;
+         @extend .transition;
+      }
+      a,
+      button{
+         display: block;
+         line-height: 35px;
+         text-transform: uppercase;
+         letter-spacing: 0.1rem;
+         color: $light-grey-color;
+         @extend .transition;
+      }
+      &:focus,
+      &:hover{
+         &:after,
+         a,
+         button{
+            color: $black-color;
+            outline:none;
+         }
+      }
+      &.active{
+         &:after{
+            content: '\f143';
+            color: $black-color;
+         }
+         a,
+         button{
+            color: $black-color;
+            outline:none;
+         }
+      }
+   }
+}
+.cart-list{
+
+   &__el{
+
+      &:nth-of-type(n+2){
+         margin-top: 30px;
+         padding-top: 30px;
+         border-top: 1px solid $light-grey-color;
+      }
+
+   }
+}
+.stores-area{
+   position: relative;
+   margin-bottom: 60px;
+
+   @include media-breakpoint-up(lg) {
+      margin-bottom: 120px;
+   }
+
+   &__info{
+
+      @include media-breakpoint-up(md) {
+         margin-right: 5%;
+      }
+      @include media-breakpoint-up(lg) {
+         margin-right: 15%;
+      }
+      @include media-breakpoint-up-1600 {
+         margin-right: 20%;
+      }
+   }
+   &__btn{
+      float: right;
+      margin-bottom: 6px;
+      span{
+         margin: 0 auto 0;
+      }
+   }
+}
+
+.about-list{
+   &__el{
+
+      &:nth-of-type(n+2){
+         margin-top: 60px;
+      }
+
+      &:nth-of-type(even){
+         .about-area{
+            &__title{
+               @include media-breakpoint-up(sm) {
+                  margin-left: 5%;
+               }
+               @include media-breakpoint-up-1600 {
+                  margin-left: 7%;
+               }
+            }
+         }
+      }
+      &:nth-of-type(odd){
+         .about-area{
+            &__title{
+               @include media-breakpoint-up(sm) {
+                  margin-right: 5%;
+               }
+               @include media-breakpoint-up-1600 {
+                  margin-right: 3%;
+               }
+            }
+            &__caption{
+               @include media-breakpoint-up(sm) {
+                  float: left;
+               }
+            }
+            &__figure{
+               @include media-breakpoint-up(sm) {
+                  float: right;
+               }
+            }
+         }
+      }
+      &:nth-of-type(4n+4),
+      &:nth-of-type(4n+1){
+         .about-area{
+            &.show{
+
+               .about-area__figure::after{
+                  width: 85%;
+
+                  @include media-breakpoint-up(sm) {
+                     width: 60%;
+                  }
+                  @include media-breakpoint-up-1600 {
+                     width: 50%;
+                  }
+               }
+            }
+            &__img{
+               width: 90%;
+
+               @include media-breakpoint-up(sm) {
+                  width: 65%;
+               }
+               @include media-breakpoint-up-1600 {
+                  width: 55%;
+               }
+            }
+
+         }
+      }
+      &:nth-of-type(4n+4){
+         .about-area{
+
+            &.show{
+               .about-area__img{
+                  transform: translateX(0);
+
+               }
+               .about-area__figure::after{
+                  margin-left: 15px;
+
+                  @include media-breakpoint-up(sm) {
+                     margin-left: 35%;
+                  }
+               }
+            }
+            &__img{
+               margin-left: 15px;
+               transform: translateX(200%);
+
+               @include media-breakpoint-up(sm) {
+                   margin-left: 35%;
+               }
+            }
+         }
+      }
+
+   }
+}
 .products-list {
 
    &__el{
-      padding-left: 15px;
-      padding-right: 15px;
+      padding-left: 7.5px;
+      padding-right: 7.5px;
       float: left;
+
+      @include media-breakpoint-up-1600 {
+         padding-left: 15px;
+         padding-right: 15px;
+      }
    }
    &--2{
 
       .products-list__el{
 
          .product-card__img{
+            height: 160px;
+
+            @media only screen and (min-width: 410px) {
+               height: 220px;
+            }
             @include media-breakpoint-up(sm) {
-               height: 300px;
+               height: 380px;
+            }
+            @include media-breakpoint-up(lg) {
+               height: 480px;
             }
             @include media-breakpoint-up(xl) {
                height: 668px;
@@ -21,8 +250,14 @@
                height: 880px;
             }
          }
-         &:nth-of-type(3n){
-            margin-top: 60px;
+         &:nth-of-type(n+3){
+            margin-top: 15px;
+            @include media-breakpoint-up(sm) {
+               margin-top: 30px;
+            }
+            @include media-breakpoint-up(lg) {
+               margin-top: 60px;
+            }
          }
          // half width
          &:nth-of-type(3n + 1),
@@ -52,7 +287,20 @@
    &--4{
       .products-list__el{
 
-         &:nth-of-type(n+4n){
+         .product-card__img{
+
+            @include media-breakpoint-up(sm) {
+               height: 450px;
+            }
+            @include media-breakpoint-up(1400px) {
+               height: 520px;
+            }
+            @include media-breakpoint-up-1600 {
+               height: 580px;
+            }
+         }
+
+         &:nth-of-type(n + 4){
             margin-top: 60px;
          }
 

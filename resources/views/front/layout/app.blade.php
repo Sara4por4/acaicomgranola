@@ -44,15 +44,22 @@
 
 
     <!-- JavaScripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{{url('/')}}/front/js/app.js"></script>
     <script src="{{url('/')}}/front/js/actions.js"></script>
-    <script src="{{url('/')}}/front/plugins/slick/slick.min.js"></script>
     <script src="{{url('/')}}/front/plugins/headroom/headroom.js"></script>
     <script src="{{url('/')}}/front/plugins/headroom/jQuery.headroom.js"></script>
+    <script src="{{url('/')}}/front/plugins/slick/slick.min.js"></script>
 
 
     @stack('scripts')
 
+    <script>
+    $( document ).ready(function() {
+      $('.nav--relative').parent('#app').addClass('padding');
+    });
+
+    </script>
 
 </body>
 </html>

@@ -10,8 +10,8 @@
          <!-- search form: only mobile -->
 
          <div class="col-lg-4">
-            <a href="#" class="link link--coral"><i class="icon icon--star"></i>Novidades</a>
-            <a href="#" class="link link--coral"><i class="icon icon--percentage"></i>Promoções</a>
+            <a href="products-list" class="link link--coral"><i class="icon icon--star"></i>Novidades</a>
+            <a href="products-list" class="link link--coral"><i class="icon icon--percentage"></i>Promoções</a>
          </div>
 
          <div class="col-lg-8">
@@ -22,26 +22,26 @@
                   <div class="nav__menu-wrap collapse dont-collapse-lg"  id="submenu1">
                      <ul class="nav__menu">
                         <li>
-                           <a href="#" class="text">Calças & Calções</a>
+                           <a href="products-list" class="text">Calças & Calções</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Saias & Vestidos</a>
+                           <a href="products-list" class="text">Saias & Vestidos</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Macacões</a>
+                           <a href="products-list" class="text">Macacões</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Casacos</a>
+                           <a href="products-list" class="text">Casacos</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Bodies</a>
+                           <a href="products-list" class="text">Bodies</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Tops & Tshirts</a>
+                           <a href="products-list" class="text">Tops & Tshirts</a>
                         </li>
                      </ul>
 
-                     <a href="#" class="nav__seeall link link--dark-coral link--small">ver todos</a>
+                     <a href="products-list" class="nav__seeall link link--coral link--small">ver todos</a>
                   </div>
                </div>
 
@@ -51,20 +51,20 @@
                   <div class="nav__menu-wrap collapse dont-collapse-lg"  id="submenu2">
                      <ul class="nav__menu">
                         <li>
-                           <a href="#" class="text">New Collection 2020</a>
+                           <a href="products-list" class="text">New Collection 2020</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Bikinis</a>
+                           <a href="products-list" class="text">Bikinis</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Fatos de Banho</a>
+                           <a href="products-list" class="text">Fatos de Banho</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Acessórios</a>
+                           <a href="products-list" class="text">Acessórios</a>
                         </li>
                      </ul>
 
-                     <a href="swimwear" class="nav__seeall link link--dark-coral link--small">ver todos</a>
+                     <a href="swimwear" class="nav__seeall link link--coral link--small">ver todos</a>
                   </div>
                </div>
 
@@ -74,23 +74,23 @@
                   <div class="nav__menu-wrap collapse dont-collapse-lg"  id="submenu3">
                      <ul class="nav__menu">
                         <li>
-                           <a href="#" class="text">New Collection 2020</a>
+                           <a href="products-list" class="text">New Collection 2020</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Leggins</a>
+                           <a href="products-list" class="text">Leggins</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Tops</a>
+                           <a href="products-list" class="text">Tops</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Bodies</a>
+                           <a href="products-list" class="text">Bodys</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Macacões</a>
+                           <a href="products-list" class="text">Macacões</a>
                         </li>
                      </ul>
 
-                     <a href="fitwear" class="nav__seeall link link--dark-coral link--small">ver todos</a>
+                     <a href="fitwear" class="nav__seeall link link--coral link--small">ver todos</a>
                   </div>
                </div>
 
@@ -100,25 +100,25 @@
                   <div class="nav__menu-wrap collapse dont-collapse-lg"  id="submenu4">
                      <ul class="nav__menu">
                         <li>
-                           <a href="#" class="text">Condições de Compra</a>
+                           <a href="guide" class="text">Condições de Compra</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Envio e Pagamento</a>
+                           <a href="guide" class="text">Envio e Pagamento</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Troca e Devoluções</a>
+                           <a href="guide" class="text">Troca e Devoluções</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Perguntas Frequentes</a>
+                           <a href="guide" class="text">Perguntas Frequentes</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Sustentabilidade</a>
+                           <a href="sustainability" class="text">Sustentabilidade</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Contactos</a>
+                           <a href="contacts" class="text">Contactos</a>
                         </li>
                         <li>
-                           <a href="#" class="text">Lojas</a>
+                           <a href="stores" class="text">Lojas</a>
                         </li>
                      </ul>
                   </div>

@@ -1,44 +1,42 @@
-$( document ).ready(function() {
-/*TAB ANIMATION*/
-$(".nav__top-menu li.active").each(function (i) {
-    document.querySelector('body').style.setProperty('--tab-width', $(this).width() + "px");
-});
+$(document).ready(function () {
 
-$(".nav__top-menu").each(function (index) {
-    var that = this;
+   $(".nav__top-menu li.active").each(function (i) {
+       document.querySelector('body').style.setProperty('--tab-width-' + (i + 1), $(this).width() + "px");
+   });
 
-    $(that).on("click", ".nav__top-menu li", function () {
-        $(that).find(".nav__top-menu li").removeClass("active");
-        $(this).addClass("active");
-        var ml = $(".nav__top-menu")[0].children[$(this).attr("data-index")].offsetLeft;
-        document.querySelector('body').style.setProperty('--tab-width', $(this).width() + "px");
-        document.querySelector('body').style.setProperty('--tab-ml', ml + "px");
-    });
+   $(".nav__top-menu").each(function (i) {
+       var that = this;
 
-    $(this).on("mouseover", ".nav__top-menu li", function () {
+       $(that).on("click", ".nav__top-menu li", function () {
+           $(that).find(".nav__top-menu li").removeClass("active");
+           $(this).addClass("active");
+           var ml = $(".nav__top-menu")[0].children[$(this).attr("data-index")].offsetLeft;
+           document.querySelector('body').style.setProperty('--tab-width-', $(this).width() + "px");
+           document.querySelector('body').style.setProperty('--tab-ml-', ml + "px");
+       });
+
+       $(this).on("mouseover", ".nav__top-menu li", function () {
          console.log('ola');
-        var ml = $(".nav__top-menu")[0].children[$(this).attr("data-index")].offsetLeft;
-        document.querySelector('body').style.setProperty('--tab-width', $(this).width() + "px");
-        document.querySelector('body').style.setProperty('--tab-ml', ml + "px");
-    });
+           var ml = $("nav__top-menu")[0].children[$(this).attr("data-index")].offsetLeft;
+           document.querySelector('body').style.setProperty('--tab-width-', $(this).width() + "px");
+           document.querySelector('body').style.setProperty('--tab-ml-', ml + "px");
+       });
 
-    $(this).on("mouseleave", ".nav__top-menu li", function () {
-      console.log('adeus');
-        var ml = $(".nav__top-menu")[0].children;
-        $(ml).each(function () {
-            if ($(this).hasClass("active")) {
-                ml = $(".nav__top-menu")[0].children[$(this).attr("data-index")].offsetLeft;
-                document.querySelector('body').style.setProperty('--tab-width', $(this).width() + "px");
-                document.querySelector('body').style.setProperty('--tab-ml', ml + "px");
-            }
-        });
-    });
 
+       $(this).on("mouseleave", ".nav__top-menu li", function () {
+           var ml = $(".nav__top-menu")[0].children;
+           $(ml).each(function () {
+               if ($(this).hasClass("active")) {
+                   ml = $(".nav__top-menu")[0].children[$(this).attr("data-index")].offsetLeft;
+                   document.querySelector('body').style.setProperty('--tab-width-', $(this).width() + "px");
+                   document.querySelector('body').style.setProperty('--tab-ml-', ml + "px");
+               }
+           });
+       });
+
+   })
 });
-})
 /*END TAB ANIMATION*/
-
-
 
 // timeline
 function isScrolledIntoView(el){

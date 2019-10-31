@@ -16,14 +16,23 @@
                   <button type="button"  @click="toggleCart()" class="icon-close"></button>
                </div>
             </div>
-            <div class="slide__container">
-               <p class="small-text small-text--semibold">O teu cesto está vazio!</p>
-               <p class="smaller-text">Adiciona um artigo para poder continuar com o processo.</p>
+
+            <!-- logado -->
+            <summarycart v-if="logged"></summarycart>
+            <!-- end: logado -->
+
+            <!-- não logado -->
+            <div v-else>
+               <div class="slide__container">
+                  <p class="small-text small-text--semibold">O teu cesto está vazio!</p>
+                  <p class="smaller-text">Adiciona um artigo para poder continuar com o processo.</p>
+               </div>
+               <div class="slide__footer">
+                  <a href="#" class="btn btn--coral">Iniciar sessão</a>
+                  <a href="#" class="btn btn--black">Não tem conta? Registe-se</a>
+               </div>
             </div>
-            <div class="slide__footer">
-               <a href="#" class="btn btn--coral">Iniciar sessão</a>
-               <a href="#" class="btn btn--black">Não tem conta? Registe-se</a>
-            </div>
+            <!-- end: não logado -->
 
          </div>
       </transition>
@@ -36,10 +45,16 @@
 </template>
 
 <script>
+import summarycart from './partials/summarycart';
+
 export default {
+   components: {
+      summarycart,
+   },
    data () {
        return {
            visible: false,
+           logged: true,
            totalProducts: 0,
        };
   },

@@ -9,16 +9,16 @@
             <div class="page-footer__social">
                <ul class="social clearfix">
                   <li>
-                     <a class="smaller-text smaller-text--bold" href="#"><i class="icon-facebook"></i>facebook</a>
+                     <a class="smaller-text smaller-text--bold" href="#"><i class="icon-facebook"></i><span>facebook</span></a>
                   </li>
                   <li>
-                     <a class="smaller-text smaller-text--bold" href="#"><i class="icon-instagram"></i>instagram</a>
+                     <a class="smaller-text smaller-text--bold" href="#"><i class="icon-instagram"></i><span>instagram</span></a>
                   </li>
                   <li>
-                     <a class="smaller-text smaller-text--bold" href="#"><i class="icon-pinterest"></i>pinterest</a>
+                     <a class="smaller-text smaller-text--bold" href="#"><i class="icon-pinterest"></i><span>pinterest</span></a>
                   </li>
                   <li>
-                     <a class="smaller-text smaller-text--bold" href="#"><i class="icon-youtube"></i>youtube</a>
+                     <a class="smaller-text smaller-text--bold" href="#"><i class="icon-youtube"></i><span>youtube</span></a>
                   </li>
                </ul>
             </div>
@@ -51,32 +51,32 @@
                   <div class="col-sm-4 col-6">
                      <ul class="page-footer__menu">
                         <li>
-                           <a class="text text--caps" href="#">bikinis</a>
+                           <a class="text text--caps" href="products-list">bikinis</a>
                         </li>
                         <li>
-                           <a class="text text--caps" href="#">fatos de banho</a>
+                           <a class="text text--caps" href="products-list">fatos de banho</a>
                         </li>
                         <li>
-                           <a class="text text--caps" href="#">leggins</a>
+                           <a class="text text--caps" href="products-list">leggins</a>
                         </li>
                         <li>
-                           <a class="text text--caps" href="#">acessórios</a>
+                           <a class="text text--caps" href="products-list">acessórios</a>
                         </li>
                      </ul>
                   </div>
                   <div class="col-sm-4 col-6">
                      <ul class="page-footer__menu">
                         <li>
-                           <a class="text text--caps" href="#">Macacões</a>
+                           <a class="text text--caps" href="products-list">Macacões</a>
                         </li>
                         <li>
-                           <a class="text text--caps" href="#">Calças</a>
+                           <a class="text text--caps" href="products-list">Calças</a>
                         </li>
                         <li>
-                           <a class="text text--caps" href="#">Calças</a>
+                           <a class="text text--caps" href="products-list">Calças</a>
                         </li>
                         <li>
-                           <a class="text text--caps" href="#">fatos de banho</a>
+                           <a class="text text--caps" href="products-list">fatos de banho</a>
                         </li>
                      </ul>
                   </div>
@@ -92,19 +92,19 @@
                      <h4 class="smaller-text smaller-text--bold">Guia de compras</h4>
                      <ul class="page-footer__submenu">
                         <li>
-                           <a class="text" href="#">Guia de tamanhos</a>
+                           <a class="text" href="guide">Guia de tamanhos</a>
                         </li>
                         <li>
-                           <a class="text" href="#">Condições de compra</a>
+                           <a class="text" href="guide">Condições de compra</a>
                         </li>
                         <li>
-                           <a class="text" href="#">Envio e Pagamento</a>
+                           <a class="text" href="guide">Envio e Pagamento</a>
                         </li>
                         <li>
-                           <a class="text" href="#">Troca e Devoluções</a>
+                           <a class="text" href="guide">Troca e Devoluções</a>
                         </li>
                         <li>
-                           <a class="text" href="#">Perguntas frequentes</a>
+                           <a class="text" href="guide">Perguntas frequentes</a>
                         </li>
                      </ul>
                   </div>
@@ -113,25 +113,25 @@
                      <h4 class="smaller-text smaller-text--bold">Sobre nós</h4>
                      <ul class="page-footer__submenu">
                         <li>
-                           <a class="text" href="#">Lojas</a>
+                           <a class="text" href="stores">Lojas</a>
                         </li>
                         <li>
-                           <a class="text" href="#">Contactos</a>
+                           <a class="text" href="contacts">Contactos</a>
                         </li>
                         <li>
-                           <a class="text" href="#">Empresa</a>
+                           <a class="text" href="about">Empresa</a>
                         </li>
                         <li>
-                           <a class="text" href="#">Sustentabilidade</a>
+                           <a class="text" href="sustainability">Sustentabilidade</a>
                         </li>
                         <li>
-                           <a class="text" href="#">Política de Privacidade</a>
+                           <a class="text" href="info">Política de Privacidade</a>
                         </li>
                         <li>
-                           <a class="text" href="#">Política de Cookies</a>
+                           <a class="text" href="info">Política de Cookies</a>
                         </li>
                         <li>
-                           <a class="text" href="#">Reclamações</a>
+                           <a class="text" href="https://www.livroreclamacoes.pt/inicio" target="_blank">Reclamações</a>
                         </li>
                      </ul>
                   </div>

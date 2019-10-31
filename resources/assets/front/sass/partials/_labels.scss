@@ -1,29 +1,30 @@
 .label{
    position: relative;
    z-index: 1;
-   width: 40px;
-   height: 40px;
-   line-height: 40px;
+   width: 50px;
+   height: 50px;
+   line-height: 50px;
    text-align: center;
    display: block;
    text-transform: uppercase;
    font-weight: $font-weight-bold;
-   font-size: .65rem;
+   font-size: .63rem;
    background-position: center;
    background-size: contain;
+   letter-spacing: 2px;
 
    @include media-breakpoint-up(sm) {
-      width: 60px;
-      height: 60px;
-      line-height: 60px;
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
       font-size: .85rem;
    }
 
-   @include media-breakpoint-up(md) {
-      width: 90px;
-      height: 90px;
-      line-height: 90px;
-      font-size: 20px;
+   @include media-breakpoint-up-1600 {
+      width: 105px;
+      height: 105px;
+      line-height: 105px;
+      font-size: 18px;
    }
 
    &--promo{
@@ -33,11 +34,14 @@
    }
    &--new{
       color: $white-color;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       background-image: url(front/img/icons/coral-round.svg);
 
       @include media-breakpoint-up(sm) {
-         letter-spacing: 2px;
+         letter-spacing: 2.8px;
+      }
+      @include media-breakpoint-up-1600 {
+         letter-spacing: 4px;
       }
    }
 

@@ -12,8 +12,9 @@
          'image2'=>'front/img/photos/photo6.jpg',
          'linklabel1'=>'nova coleção swimwear',
          'linklabel2'=>'nova coleção fitwear',
-         'link1'=>'',
-         'link2'=>'',
+         'link1'=>'products-list',
+         'link2'=>'products-list',
+         'logo'=>'front/img/logo-big.svg',
          ])
       </div>
       <div class="slideshow__slider">
@@ -22,19 +23,23 @@
          'title'=> 'swimwear',
          'image'=>'front/img/photos/photo1.jpg',
          'linklabel'=>'nova coleção swimwear',
-         'link'=>'',
+         'link'=>'products-list',
          ])
       </div>
       <div class="slideshow__slider">
-         @include('front.components.banner-divided', [
-         'subtitle'=>'Inspire-se com as novidades',
-         'title'=> 'New collection',
-         'image1'=>'front/img/photos/photo14.png',
-         'image2'=>'front/img/photos/photo4.jpg',
-         'linklabel1'=>'nova coleção swimwear',
-         'linklabel2'=>'nova coleção fitwear',
-         'link1'=>'',
-         'link2'=>'',
+         @include('front.components.small-banner', [
+         'subtitle'=>'práticos e cheios de estilo',
+         'title'=> 'acessórios',
+         'image'=>'front/img/photos/photo8.png',
+         'linklabel'=>'ver coleção',
+         'link'=>'products-list',
+         ])
+         @include('front.components.small-banner', [
+         'subtitle'=>'práticos e cheios de estilo',
+         'title'=> 'acessórios',
+         'image'=>'front/img/photos/photo11.png',
+         'linklabel'=>'ver coleção',
+         'link'=>'products-list',
          ])
       </div>
       <div class="slideshow__slider">
@@ -43,7 +48,7 @@
          'title'=> 'New collection',
          'image'=>'front/img/photos/photo2.jpg',
          'linklabel'=>'ver nova coleção',
-         'link'=>'',
+         'link'=>'products-list',
          ])
       </div>
    </div>
@@ -59,7 +64,7 @@
       'title'=> 'New collection',
       'image'=>'front/img/photos/photo9.png',
       'linklabel'=>'ver nova coleção',
-      'link'=>'',
+      'link'=>'products-list',
       ])
    </div>
 
@@ -75,7 +80,7 @@
          'title'=> 'acessórios',
          'image'=>'front/img/photos/photo8.png',
          'linklabel'=>'ver coleção',
-         'link'=>'',
+         'link'=>'products-list',
          ])
       </div>
       <div class="col">
@@ -84,7 +89,7 @@
          'title'=> 'vestidos',
          'image'=>'front/img/photos/photo4.jpg',
          'linklabel'=>'ver coleção',
-         'link'=>'',
+         'link'=>'products-list',
          ])
       </div>
    </div>
@@ -111,7 +116,7 @@
    <div class="container">
       <div class="section__header instagram">
          <h4 class="section-title section-title--caps">Partilha as tuas fotos com <span>#acaicomgranola</span></h4>
-         <p class="small-title">Segue <span>@acaicomgranola</span> para te inspirares</p>
+         <p class="small-title"><i class="icon-instagram"></i>Segue <span>@acaicomgranola</span> para te inspirares</p>
       </div>
    </div>
 
@@ -158,7 +163,7 @@ $('.slideshow').on(
    slidesToShow: 1,
    slidesToScroll: 1,
    fade: true,
-   cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+   cssEase: 'cubic-bezier(0.7, 0, 0.7, 1)',
    appendDots: '.slideshow__lines'
 });
 

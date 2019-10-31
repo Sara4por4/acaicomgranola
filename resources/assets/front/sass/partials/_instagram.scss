@@ -15,8 +15,11 @@
       @include media-breakpoint-up(lg) {
          height: 170px;
       }
+      @include media-breakpoint-up(xl) {
+         height: 200px;
+      }
       @include media-breakpoint-up-1600 {
-         height: 270px;
+         height: 287px;
       }
 
       &::before{

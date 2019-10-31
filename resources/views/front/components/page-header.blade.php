@@ -18,17 +18,18 @@
                   <p class="tiny-text tiny-text--semibold">ver</p>
                </li>
                <li class="active">
-                  <a href="#">2</a>
+                  <a class="page-grid__el" href="#">2</a>
                </li>
                <li>
-                  <a href="#">4</a>
+                  <a class="page-grid__el" href="#">4</a>
                </li>
             </ul>
             <!-- grid buttons -->
          </div>
-         <div class="page-header__el">
-            <a class="page-header__btn smaller-text smaller-text--semibold" href="#">Mostrar filtros <span class="icon icon--caret-down"></span></a>
-         </div>
+
+         <!-- filtros -->
+         <!-- filtros -->
+
       </div>
    </div>
 </div>

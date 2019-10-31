@@ -2,7 +2,8 @@
 
    <span ref="slide">
 
-       <a href="#" class="icon-padlock" @click="toggleSlide()"></a>
+      <a href="" class="icon-padlock-1" v-if="logged"></a>
+      <a href="#" class="icon-padlock" @click="toggleSlide()" v-else></a>
 
       <transition name="slide">
          <div class="slide" v-if="this.visible">
@@ -14,15 +15,34 @@
                   <button type="button"  @click="toggleSlide()" class="icon-close"></button>
                </div>
             </div>
-            <div class="slide__container">
-               <p class="small-text small-text--semibold">Já sou utilizador</p>
-               <p class="smaller-text">Introduza o seu e-mail e a sua palavra-passe para se identificar.</p>
-               <loginForm></loginForm>
+
+            <!-- login area -->
+            <div v-if="registed">
+               <div class="slide__container">
+                  <p class="small-text small-text--semibold">Já sou utilizador</p>
+                  <p class="smaller-text">Introduza o seu e-mail e a sua palavra-passe para se identificar.</p>
+                  <loginForm></loginForm>
+               </div>
+               <div class="slide__footer">
+                  <a href="user" class="btn btn--coral">Iniciar sessão</a>
+                  <button @click="register()" class="btn btn--black">Não tem conta? Registe-se</button>
+               </div>
             </div>
-            <div class="slide__footer">
-               <a href="#" class="btn btn--coral" type="submit" value="submit">Iniciar sessão</a>
-               <a href="#" class="btn btn--black">Não tem conta? Registe-se</a>
+            <!-- login area -->
+
+            <!-- register area -->
+            <div class="" v-else>
+               <div class="slide__container">
+                  <p class="small-text small-text--semibold">Criar conta</p>
+                  <p class="smaller-text">Solicitamos a informação imprescindível.</p>
+                  <registerForm></registerForm>
+               </div>
+               <div class="slide__footer">
+                  <a href="" class="btn btn--black">Registar</a>
+               </div>
             </div>
+            <!-- register area -->
+
          </div>
       </transition>
       <transition name="fade">
@@ -35,18 +55,25 @@
 
 <script>
 import loginForm from './partials/loginForm';
+import registerForm from './partials/registerForm';
 
 export default {
    data () {
        return {
            visible: false,
+           logged: false,
+           registed: true,
        };
   },
   components: {
-   loginForm
+   loginForm,
+   registerForm,
  },
   methods: {
 
+     register(){
+         this.registed = !this.registed;
+     },
      toggleSlide(){
          this.visible = !this.visible;
      },

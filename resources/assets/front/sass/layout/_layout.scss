@@ -3,6 +3,18 @@
 @include media-breakpoint-up(xl) { }
 @include media-breakpoint-up-1600 { }
 
+
+#app{
+   &.padding{
+      padding-top: 90px;
+
+      @include media-breakpoint-up-1600 {
+         padding-top: 120px;
+      }
+   }
+
+}
+
 html,
 body{
    @extend .transition;
@@ -27,8 +39,11 @@ body{
     }
 
     &--margin{
-      margin: 60px 0;
+      margin: 30px 0;
 
+      @include media-breakpoint-up(md) {
+         margin: 60px 0;
+       }
       @include media-breakpoint-up(xl) {
          margin: 110px 0;
        }
@@ -40,6 +55,17 @@ body{
     &__header{
       text-align: center;
       margin-bottom: 30px;
+
+      &.left-align{
+         text-align: left;
+         position: relative;
+         min-height: 46px;
+         .round-btn{
+            position: absolute;
+            top: 0;
+            right: 0;
+         }
+      }
 
       @include media-breakpoint-up(md) {
          margin-bottom: 60px;
@@ -57,9 +83,16 @@ body{
        }
 
        &.instagram{
+          .section-title{
+             font-weight: $font-weight-light;
+             span{
+              text-transform: lowercase;
+           }
+          }
           .small-title{
+             font-weight: $font-weight-light;
              color: $light-coral-color;
-z
+
              .icon-instagram{
                 margin-right: 10px;
 
@@ -67,6 +100,7 @@ z
                    margin-right: 15px;
                 }
              }
+
           }
        }
    }
@@ -102,15 +136,23 @@ z
          }
       }
       .products-menu{
+         margin-left: 5px;
+
+         @include media-breakpoint-up(lg) {
+            margin-left: 15px;
+         }
+         @include media-breakpoint-up-1600 {
+            margin-left: 25px;
+         }
          li{
-            margin: 0 5px;
             display: inline-block;
+            margin: 0 5px;
 
             @include media-breakpoint-up(lg) {
-               margin: 0 10px;
+               margin: 0 15px;
             }
             @include media-breakpoint-up-1600 {
-               margin: 0 15px;
+               margin: 0 25px;
             }
             a{
                text-decoration: underline;
@@ -121,13 +163,23 @@ z
 }
 
 .page-header{
-   margin-bottom: 60px;
+   margin-bottom: 15px;
+
+   @include media-breakpoint-up(sm) {
+      margin-bottom: 30px;
+   }
+   @include media-breakpoint-up(lg) {
+      margin-bottom: 60px;
+   }
 
    .col-sm-6:nth-of-type(n+2){
       text-align: right;
    }
    a{
       @extend .transition;
+   }
+   &__count{
+      color: $light-coral-color;
    }
    &__breadcrumbs{
       li{
@@ -161,11 +213,65 @@ z
          }
       }
    }
+   &__nav{
+      li{
+         position: relative;
+         display: inline-block;
+
+         &:hover{
+            a{
+               color: $light-coral-color;
+            }
+            &::after{
+               color: $light-coral-color !important;
+            }
+         }
+
+         &:nth-of-type(2n+1){
+            padding-left: 10px;
+
+            &::after{
+               content: '<';
+               position: absolute;
+               left: -10px;
+               top:0;
+               bottom:0;
+               font-size: 12px;
+               line-height: 35px;
+               color: $light-grey-color;
+            }
+         }
+         &:nth-of-type(2n+2){
+            padding-right: 10px;
+            margin-left: 10px;
+
+            &::after{
+               content: '>';
+               position: absolute;
+               right: -10px;
+               top:0;
+               bottom:0;
+               font-size: 12px;
+               line-height: 35px;
+               color: $light-grey-color;
+            }
+         }
+
+         a{
+            font-size: 12px;
+            font-weight: $font-weight-semibold;
+            display: block;
+            text-align: center;
+            color: $light-grey-color;
+            letter-spacing: 1px;
+         }
+      }
+   }
    &__el{
       display: inline-block;
       vertical-align: top;
 
-      &:nth-of-type(n+2){
+      &:last-of-type{
          padding-left: 60px;
       }
       a{
@@ -173,8 +279,35 @@ z
       }
    }
    &__btn{
+      display: block;
+      padding-right: 5px;
+
       &:hover{
          color: $light-coral-color;
+
+         &:before{
+            color: $light-coral-color;
+         }
+      }
+      &:before{
+         content: "\F140";
+         font-family: "Material Design Icons";
+         position: absolute;
+         right: 0;
+         top: 0;
+         bottom: 0;
+         transition: 0.3s all ease-in;
+         font-size: 16px;
+         color: $black-color;
+         padding-left: 5px;
+      }
+      &.open{
+         position: relative;
+         text-align: right;
+         padding-right: 20px;
+         &:before{
+            content: "\f143";
+         }
       }
    }
    &__grid{
@@ -196,12 +329,32 @@ z
          a{
             font-size: 14px;
             font-weight: $font-weight-bold;
-            width: 25px;
             display: block;
             text-align: center;
+
+         }
+         .page-grid__el{
+            width: 25px;
+
+            .icon{
+               line-height: 35px;
+               display: block;
+            }
          }
 
       }
+   }
+}
+.search-empty{
+   color: $grey-color;
+   min-height: calc(100vh - 300px);
+   display: table;
+    width: 100%;
+
+    &__container{
+      display: table-cell;
+    vertical-align: middle;
+    text-align: center;
    }
 }
 

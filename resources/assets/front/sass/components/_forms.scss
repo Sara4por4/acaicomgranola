@@ -1,13 +1,12 @@
 .form{
 
    &--search{
+      position: relative;
+      margin-bottom: 30px;
       width: 100%;
       position: relative;
 
-      input{
-         height: 35px;
-         width: calc(100% - 50px);
-      }
+
       i{
          color: $light-coral-color;
          padding-right: 10px;
@@ -15,6 +14,89 @@
          line-height: 36px;
          display: inline-block;
       }
+      input{
+         font-style: italic;
+         color: $light-grey-color;
+         font-size: 14px !important;
+         display: inline-block;
+         height: 35px;
+         width: calc(100% - 60px);
+         padding-bottom: 5px;
+
+         @include media-breakpoint-up(sm) {
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            width: calc(100% - 40px);
+            font-size: 22px !important;
+            padding-right: 60px;
+         }
+
+         &::placeholder{
+            color: $black-color;
+         }
+      }
+      .icon-search{
+         color: $light-coral-color;
+         font-size: 16px;
+
+         @include media-breakpoint-up-1600 {
+            font-size: 22px;
+         }
+
+         @include media-breakpoint-up-1600 {
+            font-size: 30px;
+         }
+      }
+      .icon-cancel{
+         font-size: 20px;
+         position: absolute;
+         right:0;
+         top:0;
+         width: 50px;
+         height: 35px;
+         line-height: 35px;
+         color: $light-grey-color;
+
+         @include media-breakpoint-up(xl) {
+            font-size: 24px;
+         }
+         @include media-breakpoint-up-1600 {
+            font-size: 26px;
+         }
+         &:hover,
+         &:focus{
+            outline: none;
+            color: $light-coral-color;
+         }
+      }
+   }
+   &--contacts{
+      margin-top: 60px;
+      margin-bottom: 60px;
+
+      @include media-breakpoint-up(xl) {
+         margin-bottom: 120px;
+      }
+      textarea,
+      input{
+         display: block;
+         border-top: none;
+         border-left: none;
+         border-right: none;
+         border-radius: 0;
+         width: 100%;
+         padding-left: 0;
+         color:$beige-color;
+
+         &:focus,
+         &:hover{
+            border-bottom: 1px solid $black-color;
+         }
+      }
+   }
+   &--search{
+
    }
    &--newsletter{
       width: 100%;
@@ -44,9 +126,9 @@
          &:focus,
          &:hover{
             border: 1px solid $black-color;
-
          }
       }
+
       button{
          float:right;
          height: 50px;
@@ -65,6 +147,12 @@
             height: 70px;
             line-height: 70px;
          }
+      }
+   }
+   &--user{
+      margin-top: 30px;
+      @include media-breakpoint-up(lg) {
+         margin-top: 60px !important;
       }
    }
    &--authentication{
@@ -92,32 +180,26 @@
    .form-group{
       margin-bottom: 30px !important;
    }
-
+   textarea,
    input{
       background-color: transparent;
       border-bottom: 1px solid $beige-color;
       font-style: italic;
-      color:$beige-color;
+      color:$black-color;
       font-size: .8rem;
       @extend .transition;
+      font-style: italic;
 
-
+      &:checked,
       &:focus,
       &:active{
+         color:$black-color;
          background-color: transparent !important;
          box-shadow: none;
       }
 
-      &::placeholder,
-      &::-webkit-input-placeholder,
-      &:-moz-input-placeholder,
-      &::-moz-input-placeholder,
-      &:-ms-input-placeholder,
-      &::-ms-input-placeholder {
-         font-style: italic;
-         color:$beige-color !important;
-         font-size: .8rem;
-         letter-spacing: 1px;
+      &::placeholder{
+         color: $beige-color !important;
       }
    }
    label{
@@ -126,15 +208,220 @@
       letter-spacing: 2.5px;
       font-size: .8rem;
    }
+   &__footer{
+      label{
+         padding-left: 5px;
+         display: inline-block;
+         vertical-align: top;
+         font-weight: $font-weight-regular;
+         text-transform: initial;
+         letter-spacing: .5px;
+      }
+      input[type=checkbox]{
+         margin-top:0;
+         width: 20px;
+         height: 20px;
+         display: inline-block;
+         vertical-align: top;
+         position: relative !important;
+         margin-left: 0 !important;
+      }
+      .tip{
+         padding-left: 5px;
+      }
+      .round-btn{
+         float: right;
+      }
+   }
 }
 .tip{
    display: block;
    color: $grey-color;
-   margin-top: 15px;
-   font-size:.7rem;
+   margin-top: 5px;
+   font-size:.8rem;
+}
 
-   @include media-breakpoint-up-1600 {
-      margin-top: 30px;
-      font-size:1rem;
+// radio button style
+/* Customize the label (the container) */
+.size-select{
+   // width: auto !important;
+
+   label{
+      padding-left: 50px;
+      font-size: 14px;
+      font-weight: $font-weight-semibold;
+      text-transform: uppercase;
+      line-height: 30px;
    }
+}
+.size-product{
+   height: 35px !important;
+   width: 30px !important;
+
+
+   label{
+      margin-bottom: 0 !important;
+      text-align: center;
+      font-size: 16px;
+      font-weight: $font-weight-regular;
+      text-transform: uppercase;
+      line-height: 35px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 35px;
+      width: 30px;
+      background-color: white;
+      cursor: pointer;
+   }
+}
+.size-product:hover input ~ label,
+.size-product:checked input ~ label{
+   font-weight: $font-weight-bold;
+   text-decoration: underline;
+}
+
+.size-product,
+.size-select,
+.color-select {
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 25px;
+  width: 25px;
+}
+
+/* Hide the browser's default radio button */
+.size-product input,
+.size-select input,
+.color-select input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+ box-sizing: content-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: white;
+  border: 2px solid $beige-color;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.size-select:hover input ~ .checkmark,
+.color-select:hover input ~ .checkmark {
+   border: 2px solid $black-color;
+   background-color: white;
+}
+
+/* When the radio button is checked, add a blue background */
+.color-select input:checked ~ .checkmark {
+  background-color: $black-color;
+}
+
+.size-select input:checked ~ .checkmark{
+   border: 2px solid $black-color;
+}
+.color-select input:checked ~ .checkmark {
+  border: 2px solid $black-color;
+  background-color: white;
+}
+
+
+/* Style the indicator (dot/circle) */
+.size-select .checkmark:after,
+.color-select .checkmark:after {
+   content: "";
+   position: absolute;
+   top: 3px;
+   left: 3px;
+   width: 18px;
+   height: 18px;
+   border-radius: 50%;
+   background-color: #F4F2F2;
+}
+.checkmark.pink:after {
+   background-color: #F08EDD;
+}
+.checkmark.blue:after {
+   background-color: #7F74FF;
+}
+.checkmark.green:after {
+   background-color: #8FE2C2;
+}
+
+.filters-form{
+   margin-top: 30px;
+
+   &__el{
+
+      &:nth-of-type(n+2){
+         margin-top: 15px;
+      }
+   }
+
+   &__title{
+      text-transform: uppercase;
+      color: $light-grey-color;
+      font-size: 12px;
+      font-weight: $font-weight-semibold;
+      letter-spacing: 2px;
+      line-height: 35px;
+      cursor: pointer;
+      display: block;
+      position: relative;
+      @extend .transition;
+
+      &::after{
+         content: '\f140';
+         font-family: $font-family-icons;
+         position: absolute;
+         right: 0;
+         top: 0;
+         transition: .3s all ease-in;
+         font-size: 16px;
+         color: $light-grey-color;
+      }
+
+      &:hover{
+         color: $black-color;
+         &::after{
+            color: $black-color;
+         }
+      }
+      &.opened{
+         color: $black-color;
+         &::after{
+            color: $black-color;
+            transform: rotate(180deg);
+         }
+      }
+   }
+   &__collapse{
+      .color-select{
+         display: inline-block;
+         margin-right: 10px;
+      }
+      .size-select{
+         display: inline-block;
+         width: 40% !important;
+
+         &:nth-of-type(n+3){
+            margin-top: 10px;
+         }
+      }
+   }
+
 }
