@@ -11699,13 +11699,13 @@ body,
 
 .label--promo {
   color: #FF8674;
-  background-image: url(/images/white-round.svg?c24315953275176993e03fff1d0242f1);
+  background-image: url(/images/white-round.svg?687f6c6e15bfa3d051ead6d404cd8e25);
 }
 
 .label--new {
   color: #fff;
   letter-spacing: 2px;
-  background-image: url(/images/coral-round.svg?71f56355b511abbe3b1e98c1cb610d63);
+  background-image: url(/images/coral-round.svg?80d81a1779a2b30d3f763302306d2a17);
 }
 
 @media (min-width: 576px) {
@@ -27557,7 +27557,7 @@ body.e-colorpicker-overflow {
 
 .round-btn span::after {
   content: "";
-  background-image: url(/images/white-round.svg?c24315953275176993e03fff1d0242f1);
+  background-image: url(/images/white-round.svg?687f6c6e15bfa3d051ead6d404cd8e25);
   background-position: center;
   background-size: contain;
 }
@@ -27575,7 +27575,7 @@ body.e-colorpicker-overflow {
 }
 
 .round-btn.black:hover span::after {
-  background-image: url(/images/black-round.svg?412a6e85d2b990031eaf0ea95aed37c6);
+  background-image: url(/images/black-round.svg?9ee38cdf351e8d343872638e97dc57f2);
 }
 
 .round-btn.text-small {
@@ -27642,7 +27642,7 @@ body.e-colorpicker-overflow {
 
 .round-btn:focus span::after,
 .round-btn:hover span::after {
-  background-image: url(/images/coral-round.svg?71f56355b511abbe3b1e98c1cb610d63);
+  background-image: url(/images/coral-round.svg?80d81a1779a2b30d3f763302306d2a17);
 }
 
 [type=button],
@@ -27999,7 +27999,7 @@ body.e-colorpicker-overflow {
 .nav__cart .items::after {
   content: "";
   z-index: -1;
-  background-image: url(/images/coral-round.svg?71f56355b511abbe3b1e98c1cb610d63);
+  background-image: url(/images/coral-round.svg?80d81a1779a2b30d3f763302306d2a17);
 }
 
 .nav__logo {
